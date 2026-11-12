@@ -1,0 +1,228 @@
+.help-support-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.help-hero {
+  background-color: var(--white, #FFFFFF);
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: 14px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.help-hero-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: var(--blue-light, #EFF6FF);
+  color: var(--blue-primary, #2563EB);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.help-hero h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark, #0F172A);
+  margin: 0 0 8px 0;
+}
+
+.help-hero p {
+  font-size: 15px;
+  color: var(--text-secondary, #64748B);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+}
+
+/* FAQ Card */
+.faq-section-card {
+  background-color: var(--white, #FFFFFF);
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card-header-styled {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border, #E2E8F0);
+}
+
+.header-icon {
+  color: var(--blue-primary, #2563EB);
+}
+
+.card-header-styled h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark, #0F172A);
+  margin: 0;
+}
+
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-item {
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.accordion-item.active {
+  border-color: #BFDBFE;
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--white, #FFFFFF);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark, #0F172A);
+}
+
+.accordion-trigger:hover {
+  background-color: var(--bg-primary, #F8FAFC);
+}
+
+.faq-question {
+  flex: 1;
+}
+
+.accordion-body {
+  padding: 0 16px 16px 16px;
+  background-color: var(--white, #FFFFFF);
+}
+
+.accordion-body p {
+  font-size: 13px;
+  color: var(--text-secondary, #64748B);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contact Column */
+.contact-section-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card {
+  background-color: var(--white, #FFFFFF);
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.contact-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark, #0F172A);
+  margin: 0 0 6px 0;
+}
+
+.contact-card-desc {
+  font-size: 13px;
+  color: var(--text-secondary, #64748B);
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.detail-icon {
+  color: var(--blue-primary, #2563EB);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-detail-row div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-detail-row strong {
+  font-size: 13px;
+  color: var(--text-dark, #0F172A);
+}
+
+.contact-detail-row span {
+  font-size: 13px;
+  color: var(--text-secondary, #64748B);
+}
+
+.emergency-alert-card {
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 14px;
+  padding: 20px;
+  color: #991B1B;
+}
+
+.emergency-alert-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.emergency-alert-card p {
+  font-size: 12px;
+  margin: 0 0 10px 0;
+}
+
+.emergency-alert-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 900px) {
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

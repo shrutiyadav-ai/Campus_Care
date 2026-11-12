@@ -1,0 +1,197 @@
+.admin-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* 6 Metrics Grid */
+.admin-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.metric-card {
+  background-color: var(--white, #FFFFFF);
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.metric-total::before { background-color: var(--blue-primary, #2563EB); }
+.metric-pending::before { background-color: var(--orange, #F59E0B); }
+.metric-progress::before { background-color: #8B5CF6; }
+.metric-resolved::before { background-color: var(--green, #16A34A); }
+.metric-students::before { background-color: #06B6D4; }
+.metric-departments::before { background-color: #EC4899; }
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.metric-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary, #64748B);
+}
+
+.metric-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-total .metric-icon { background-color: var(--blue-light, #EFF6FF); color: var(--blue-primary, #2563EB); }
+.metric-pending .metric-icon { background-color: var(--orange-light, #FFFBEB); color: var(--orange, #F59E0B); }
+.metric-progress .metric-icon { background-color: #F5F3FF; color: #8B5CF6; }
+.metric-resolved .metric-icon { background-color: var(--green-light, #F0FDF4); color: var(--green, #16A34A); }
+.metric-students .metric-icon { background-color: #ECFEFF; color: #06B6D4; }
+.metric-departments .metric-icon { background-color: #FDF2F8; color: #EC4899; }
+
+.metric-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark, #0F172A);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.metric-subtext {
+  font-size: 11px;
+  color: var(--text-secondary, #64748B);
+}
+
+/* Charts Grid */
+.admin-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.chart-card {
+  background-color: var(--white, #FFFFFF);
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.chart-card-header {
+  margin-bottom: 20px;
+}
+
+.chart-card-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark, #0F172A);
+  margin: 0 0 2px 0;
+}
+
+.chart-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary, #64748B);
+}
+
+.chart-render-wrap {
+  width: 100%;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-empty {
+  font-size: 13px;
+  color: var(--text-secondary, #64748B);
+  text-align: center;
+}
+
+/* Table Card */
+.admin-table-card {
+  background-color: var(--white, #FFFFFF);
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.table-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.table-card-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark, #0F172A);
+  margin: 0;
+}
+
+.table-card-header p {
+  font-size: 13px;
+  color: var(--text-secondary, #64748B);
+  margin: 2px 0 0 0;
+}
+
+.student-name {
+  font-weight: 600;
+  color: var(--text-dark, #0F172A);
+}
+
+.dept-name {
+  font-size: 13px;
+  color: var(--text-secondary, #64748B);
+}
+
+@media (max-width: 1280px) {
+  .admin-metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .admin-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
