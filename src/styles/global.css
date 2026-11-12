@@ -158,13 +158,13 @@ p {
   background-color: var(--blue-primary);
   color: var(--white);
   border-color: var(--blue-primary);
-  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.15);
+  box-shadow: var(--shadow-xs);
 }
 
 .btn-primary:hover:not(:disabled) {
   background-color: var(--blue-hover);
   border-color: var(--blue-hover);
-  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.25);
+  box-shadow: var(--shadow-sm);
   transform: translateY(-1px);
 }
 
@@ -204,12 +204,13 @@ p {
   background-color: var(--red);
   color: var(--white);
   border-color: var(--red);
-  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.15);
+  box-shadow: var(--shadow-xs);
 }
 
 .btn-danger:hover:not(:disabled) {
   background-color: #B91C1C;
   border-color: #B91C1C;
+  box-shadow: var(--shadow-sm);
   transform: translateY(-1px);
 }
 

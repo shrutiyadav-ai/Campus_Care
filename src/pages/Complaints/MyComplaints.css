@@ -154,7 +154,7 @@
 .dept-text {
   font-size: 13px;
   color: var(--text-secondary, #64748B);
-  font-style: italic;
+  font-weight: 500;
 }
 
 .loading-state {

@@ -6,7 +6,7 @@
 
 /* Welcome Banner */
 .welcome-banner {
-  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  background-color: #1D4ED8;
   border-radius: 14px;
   padding: 28px 32px;
   color: #FFFFFF;
@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 .welcome-text h2 {
