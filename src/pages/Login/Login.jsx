@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Shield, Mail, Lock, Eye, EyeOff, AlertCircle, Loader2 } from 'lucide-react';
+import { Shield, GraduationCap, Mail, Lock, Eye, EyeOff, AlertCircle, Loader2, ArrowLeft } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import './Login.css';
 
@@ -20,7 +20,7 @@ export default function Login() {
     setError('');
 
     if (!email.trim() || !password.trim()) {
-      setError('Please enter both email and password.');
+      setError('Please enter both your university email and password.');
       return;
     }
 
@@ -43,12 +43,23 @@ export default function Login() {
   return (
     <div className="login-page">
       <div className="login-card">
+        <Link to="/" className="login-back-home">
+          <ArrowLeft size={16} />
+          <span>Back to Home</span>
+        </Link>
+
         <div className="login-branding">
-          <div className="login-logo">
-            <Shield size={28} className="login-logo-icon" />
-            <span className="login-logo-text">CampusCare</span>
+          <div className="login-logo-box">
+            <Shield size={24} className="login-logo-shield" />
+            <GraduationCap size={14} className="login-logo-cap" />
           </div>
-          <p className="login-tagline">Welcome back to CampusCare</p>
+          <span className="login-logo-text">CampusCare</span>
+          <span className="login-portal-pill">University Grievance Portal</span>
+        </div>
+
+        <div className="login-header-text">
+          <h2>Sign In to Your Account</h2>
+          <p>Access your student reports or administrative portal</p>
         </div>
 
         {error && (
@@ -60,13 +71,13 @@ export default function Login() {
 
         <form className="login-form" onSubmit={handleSubmit} noValidate>
           <div className="form-group">
-            <label htmlFor="email">University Email</label>
+            <label htmlFor="email">University Email Address</label>
             <div className="input-wrapper">
               <Mail size={18} className="input-icon" />
               <input
                 id="email"
                 type="email"
-                placeholder="you@university.edu"
+                placeholder="student@university.edu"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete="email"
@@ -82,7 +93,7 @@ export default function Login() {
               <input
                 id="password"
                 type={showPassword ? 'text' : 'password'}
-                placeholder="Enter your password"
+                placeholder="••••••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 autoComplete="current-password"
@@ -107,28 +118,33 @@ export default function Login() {
                 checked={rememberMe}
                 onChange={(e) => setRememberMe(e.target.checked)}
               />
-              Remember me
+              <span>Remember me</span>
             </label>
             <Link to="/forgot-password" className="forgot-link">
-              Forgot Password?
+              Forgot password?
             </Link>
           </div>
 
           <button type="submit" className="login-btn" disabled={loading}>
             {loading ? (
               <>
-                <Loader2 size={20} className="spinner" />
-                Signing in…
+                <Loader2 size={18} className="spinner" />
+                <span>Signing in...</span>
               </>
             ) : (
-              'Sign In'
+              <span>Sign In to Portal</span>
             )}
           </button>
         </form>
 
-        <p className="login-footer">
-          Don&apos;t have an account? <Link to="/register">Register</Link>
-        </p>
+        <div className="login-footer">
+          <p>
+            Don't have a student account?{' '}
+            <Link to="/register" className="register-link">
+              Register here
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );
